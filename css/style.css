@@ -1,0 +1,19 @@
+.wrapper{min-width:320px; max-width:960px; margin:20px auto;font-family: 'Fira Sans', sans-serif; color:rgb(79,79,79);
+font-size:15px; line-height:1.42;padding:0 10px;}
+.logo{text-align:center;}
+.accordion{margin:0;padding:0;}
+.accordion__item{list-style:none;border-radius:25px; overflow:hidden; background-color:rgb(231,231,231);margin-bottom:5px;}
+.accordion__item:nth-child(odd) .item__name{background-color:rgb(105,102,102); color:rgb(255,255,255);}
+.accordion__item:nth-child(even) .item__name{background-color:rgb(231,231,231);}
+.item{margin:0; }
+.item__name{padding:15px 40px 15px 20px;border-radius:25px;font-weight:500; position:relative; cursor:pointer;}
+.item__content{padding:15px 20px; font-weight:300;}
+.item__name:after{content:""; display:block;position:absolute; right:20px; top:50%; margin-top:-8px;width: 0; height: 0; border-left: 9px solid transparent;border-right: 9px solid transparent;border-top: 15px solid rgb(255,134,99);}
+.item__content{   display:none; padding:15px 20px;  margin:0; transition: max-height 0.8s;}
+.item__content ul{margin:0;padding:0;}
+.item__content li{list-style:none;}
+
+/* Accordion active */
+.item.active  .item__name{background-color:rgb(255,134,99);color:rgb(255,255,255);}
+.active	.item__name:after{	border-bottom: 15px solid rgb(255,255,255); border-top: 0;margin-top:-8px;}
+.active	.item__content{ display:block;}
